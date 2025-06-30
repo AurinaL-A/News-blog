@@ -7,7 +7,7 @@ export const PostList = () => {
   const posts = useStore($visiblePosts);
 
   return (
-    <div>
+    <div className='cards'>
       {posts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}

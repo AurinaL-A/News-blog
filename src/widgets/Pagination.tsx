@@ -11,15 +11,12 @@ export const Pagination = () => {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <div style={{ marginTop: '1rem' }}>
+    <div className='pagination'>
       {pages.map((pageNum) => (
         <button
           key={pageNum}
           onClick={() => setPage(pageNum)}
-          style={{
-            marginRight: 8,
-            fontWeight: pageNum === currentPage ? 'bold' : 'normal',
-          }}
+          className={pageNum === currentPage ? 'active' : ''}
         >
           {pageNum}
         </button>

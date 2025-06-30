@@ -6,7 +6,7 @@ import { Pagination } from '../../widgets/Pagination';
 
 export const BlogPage = () => {
   return (
-    <div style={{ maxWidth: 800, margin: '0 auto', padding: '2rem' }}>
+    <div >
       <h1>Новости</h1>
       <CategoryFilter />
       <PostList />

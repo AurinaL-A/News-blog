@@ -1,21 +1,24 @@
-import { setCategory, setPage } from '../pages/blog/model';
 import React from 'react';
+import { useUnit } from 'effector-react';
+import { setCategory, setPage, $category } from '../pages/blog/model';
 
-const categories = ['all', 'sport', 'history'];
+const categories = ['all', 'Спорт', 'История', 'Технологии', 'Культура'];
 
 export const CategoryFilter = () => {
+  const selectedCategory = useUnit($category);
+
   const handleClick = (category: string) => {
     setCategory(category);
-    setPage(1); // сбрасываем на первую страницу при смене фильтра
+    setPage(1); // сброс пагинации при смене категории
   };
 
   return (
-    <div style={{ marginBottom: '1rem' }}>
+    <div className="filter">
       {categories.map((cat) => (
         <button
           key={cat}
           onClick={() => handleClick(cat)}
-          style={{ marginRight: '10px' }}
+          className={cat === selectedCategory ? 'active' : ''}
         >
           {cat.toUpperCase()}
         </button>

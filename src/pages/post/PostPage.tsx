@@ -10,7 +10,7 @@ export const PostPage = () => {
 
   if (!post) {
     return (
-      <div style={{ padding: '2rem' }}>
+      <div className='container'>
         <h2>Пост не найден</h2>
         <Link to="/">Вернуться назад</Link>
       </div>
@@ -18,7 +18,7 @@ export const PostPage = () => {
   }
 
   return (
-    <div style={{ maxWidth: 800, margin: '0 auto', padding: '2rem' }}>
+    <div className='container'>
       <h1>{post.title}</h1>
       <p>{post.full}</p>
       <Link to="/">← Назад к новостям</Link>
