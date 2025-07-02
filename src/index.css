@@ -47,7 +47,15 @@ p{
 .back {
   background: #f9f9f9;
 }
-
+.image{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.img{
+  width:100%; object-fit:cover; 
+  max-height: 500px;
+}
 .pagination {
   display: flex;
   gap: 8px;
@@ -146,6 +154,8 @@ p{
 .b-categories__item__header-info{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .b-categories__item__number{
   border-radius: 8px;
@@ -162,4 +172,7 @@ p{
   font-weight: 400;
   margin-bottom: 20px;
   font-size: 18px;
+}
+.text_full{
+  padding-bottom: 30px;
 }

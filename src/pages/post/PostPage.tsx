@@ -19,8 +19,12 @@ export const PostPage = () => {
 
   return (
     <div className='container'>
+      <div className='image'>
+        <img className='img' src={post.image} alt="img" />
+      </div>
+      
       <h1>{post.title}</h1>
-      <p>{post.full}</p>
+      <p className='text_full'>{post.full}</p>
       <Link to="/">← Назад к новостям</Link>
     </div>
   );
