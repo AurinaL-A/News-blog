@@ -9,7 +9,7 @@ export const CategoryFilter = () => {
 
   const handleClick = (category: string) => {
     setCategory(category);
-    setPage(1); // сброс пагинации при смене категории
+    setPage(1);
   };
 
   return (
